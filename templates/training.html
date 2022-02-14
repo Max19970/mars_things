@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% if prof == "инженер" or prof == "строитель" %}
+    {% if "инженер" in prof or "строитель" in prof %}
         <h2 align="center">Инженерные тренажеры</h2>
         <img src="/static/img/IT.png">
     {% else %}
