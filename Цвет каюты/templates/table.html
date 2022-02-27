@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 align="center">Оформление каюты</h2>
+    {% if sex == 'male' %}
+        {% if age < 21 %}
+            <table align="center">
+                <tr align="center"><th width="200">Цвет стен</th><th width="200">Эмблема</th></tr>
+                <tr><td width="200" style="background:#42aaff"></td><td width="200"><img src="/static/img/child.png"></td></tr>
+            </table>
+        {% else %}
+            <table align="center">
+                <tr align="center"><th width="200">Цвет стен</th><th width="200">Эмблема</th></tr>
+                <tr><td width="200" style="background:blue"></td><td width="200"><img src="/static/img/old.jpg"></td></tr>
+            </table>
+        {% endif %}
+    {% else %}
+        {% if age < 21 %}
+            <table align="center">
+                <tr align="center"><th width="200">Цвет стен</th><th width="200">Эмблема</th></tr>
+                <tr><td width="200" style="background:#ff5c77"></td><td width="200"><img src="/static/img/child.png"></td></tr>
+            </table>
+        {% else %}
+            <table align="center">
+                <tr align="center"><th width="200">Цвет стен</th><th width="200">Эмблема</th></tr>
+                <tr><td width="200" style="background:red"></td><td width="200"><img src="/static/img/old.jpg"></td></tr>
+            </table>
+        {% endif %}
+    {% endif %}
+{% endblock %}
