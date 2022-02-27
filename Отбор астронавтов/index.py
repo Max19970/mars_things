@@ -66,7 +66,7 @@ def form_sample():
                                 <title>Отбор астронафтов</title>
                           </head>
                           <body>
-                                <h1 align='center'>Анкета претендента</h1>
+                                <h2 align='center'>Анкета претендента</h2>
                                 <h3 align='center'>на участие в миссии</h3>
                                 <div>
                                     <form class="login_form" method="post">
@@ -85,14 +85,14 @@ def form_sample():
                                         <div class="formbuilder-checkbox-group form-group field-jobs">
                                             <label for="jobs" class="formbuilder-checkbox-group-label">Какие у вас есть профессии?</label>
                                             <div class="checkbox-group">
-                                                <input name="job" value="Инженер-исследователь" type="checkbox">Инженер-исследователь</input>
-                                                <input name="job" value="Инженер-строитель" type="checkbox">Инженер-строитель</input>
-                                                <input name="job" value="Пилот" type="checkbox">Пилот</input>
-                                                <input name="job" value="Метеоролог" type="checkbox">Метеоролог</input>
-                                                <input name="job" value="Инженер по жизнеобеспечению" type="checkbox">Инженер по жизнеобеспечению</input>
-                                                <input name="job" value="Инженер по радиационной защите" type="checkbox">Инженер по радиационной защите</input>
-                                                <input name="job" value="Врач" type="checkbox">Врач</input>
-                                                <input name="job" value="Экзобиолог" type="checkbox">Экзобиолог</input>
+                                                <input name="job" value="Инженер-исследователь" type="checkbox">Инженер-исследователь</input><br>
+                                                <input name="job" value="Инженер-строитель" type="checkbox">Инженер-строитель</input><br>
+                                                <input name="job" value="Пилот" type="checkbox">Пилот</input><br>
+                                                <input name="job" value="Метеоролог" type="checkbox">Метеоролог</input><br>
+                                                <input name="job" value="Инженер по жизнеобеспечению" type="checkbox">Инженер по жизнеобеспечению</input><br>
+                                                <input name="job" value="Инженер по радиационной защите" type="checkbox">Инженер по радиационной защите</input><br>
+                                                <input name="job" value="Врач" type="checkbox">Врач</input><br>
+                                                <input name="job" value="Экзобиолог" type="checkbox">Экзобиолог</input><br>
                                             </div>
                                         </div>
                                         <div class="formbuilder-radio-group form-group field-sex">
