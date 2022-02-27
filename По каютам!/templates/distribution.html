@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% set cabin = 'Каюта №' %}
+    {% for i in data %}
+        {% if loop.first %}
+            {{ i }} - {{ cabin }}{{ loop.index }} - капитан корабля<br>
+        {% else %}
+            {{ i }} - {{ cabin }}{{ loop.index }}<br>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
