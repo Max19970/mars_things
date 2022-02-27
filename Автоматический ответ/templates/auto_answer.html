@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+<p>Фамилия: {{ surname }}</p><br>
+<p>Имя: {{ name }}</p><br>
+<p>Образование: {{ education }}</p><br>
+<p>Профессия: {{ profession }}</p><br>
+<p>Пол: {{ sex }}</p><br>
+<p>Мотивация: {{ motivation }}</p><br>
+<p>Готовы остаться на Марсе? {{ ready }}</p>
+{% endblock %}
