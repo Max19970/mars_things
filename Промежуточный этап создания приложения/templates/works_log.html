@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    Главная страница
+{% endblock %}
+
+
+{% block content %}
+    <h2 align="center">Works Log</h2>
+    {% for job, team_leader in jobs %}
+        <h3>Action #{{ job.id }}</h3>
+        <table>
+            <tr align="center"><th>Title of activity</th>
+                <th>Team leader</th>
+                <th>Duration</th>
+                <th>List of collaborators</th>
+                <th>Is finished</th></tr>
+            <tr align="center"><td>{{ job.job.capitalize() }}</td>
+                <td>{{ team_leader }}</td>
+                <td>{{ job.work_size }} hours</td>
+                <td>{{ job.collaborators }}</td>
+                <td>{% if job.is_finished %}Is finished{% else %}Is not finished{% endif %}</td></tr>
+        </table>
+    {% endfor %}
+{% endblock %}
