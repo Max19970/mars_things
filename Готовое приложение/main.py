@@ -32,9 +32,11 @@ def logout():
     return redirect("/")
 
 
+@app.route('/')
+@app.route('/index/')
 @app.route('/<title>')
 @app.route('/index/<title>')
-def index(title):
+def index(title='Main page'):
     return render_template('base_title.html', title=title)
 
 
@@ -105,7 +107,6 @@ def add_job():
             collaborators=form.collaborators.data,
             start_date=dt.datetime.now(),
             is_finished=form.is_finished.data,
-            user=current_user.email
         )
         db_sess.add(job)
         db_sess.commit()
