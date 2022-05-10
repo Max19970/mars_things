@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" xmlns:padding-left="http://www.w3.org/1999/xhtml" xmlns:padding-right="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+</head>
+<body>
+<!-- Begin page content -->
+<div style="margin-left: 100px;margin-right: 100px">
+    <h1 align="center">Загрузка фотографии</h1>
+    <h3 align="center">для участия в миссии</h3>
+    <form class="photo_form" action="" method="post" novalidate enctype=multipart/form-data>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.file.label }}<br>
+            {{ form.file(class="form-control") }}<br>
+            {% for error in form.file.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        {% if image %}
+            <img src="{{ image }}" style="max-width: 425px"/>
+        {% endif %}
+        <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+    </form>
+</div>
+</body>
+</html>
